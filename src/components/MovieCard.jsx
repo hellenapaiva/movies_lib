@@ -12,11 +12,7 @@ const MovieCard = ({ movie, showLink = true }) => {
       <p className="average">
         <BsFillStarFill /> {movie.vote_average}
       </p>
-      {showLink && (
-        <Link to={`/movie/${movie.id}`} className="link-details">
-          Detalhes
-        </Link>
-      )}
+      {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
     </div>
   );
 };
