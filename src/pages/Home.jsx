@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+import { BiLoaderAlt } from "react-icons/bi";
+import MovieCard from "../components/MovieCard";
+
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -18,7 +21,18 @@ const Home = () => {
   }, []);
 
   return (
-    <div>{topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}</div>
+    <div className="container">
+      <h1 className="title">Melhores filmes:</h1>
+      <div className="movies-container">
+        {topMovies.length === 0 && (
+          <p>
+            <BiLoaderAlt />
+          </p>
+        )}
+        {topMovies.length > 0 &&
+          topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+      </div>
+    </div>
   );
 };
 
