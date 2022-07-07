@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { BiLoaderAlt } from "react-icons/bi";
 import MovieCard from "../components/MovieCard";
 
+import "./MoviesGrid.css";
+
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -22,7 +24,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Melhores filmes:</h1>
+      <h1 className="title">Melhores filmes</h1>
       <div className="movies-container">
         {topMovies.length === 0 && (
           <p>
