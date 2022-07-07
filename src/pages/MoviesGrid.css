@@ -5,7 +5,7 @@
   margin: 2rem 0 1rem;
 }
 
-.title . query-text {
+.title .query-text {
   color: #e55812;
 }
 
@@ -54,7 +54,7 @@
   color: #fff;
   padding: 1rem 0.5rem;
   text-align: center;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .movies-container div a:hover {

@@ -26,11 +26,7 @@ const Home = () => {
     <div className="container">
       <h1 className="title">Melhores filmes</h1>
       <div className="movies-container">
-        {topMovies.length === 0 && (
-          <p>
-            <BiLoaderAlt />
-          </p>
-        )}
+        {topMovies.length === 0 && <p>Carregando...</p>}
         {topMovies.length > 0 &&
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>

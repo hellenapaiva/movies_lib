@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.navbar:hover button {
+.button:hover {
   background-color: #1c1d21;
   color: #fff;
 }
